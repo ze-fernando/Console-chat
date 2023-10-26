@@ -14,7 +14,10 @@ class MyHub : Hub
 {
     public async IAsyncEnumerable<DateTime> Streaming(CancellationToken cct)
     {
-        yield return DateTime.Now;
-        await Task.Delay(1000, cct);
+        while (true)
+        {
+            yield return DateTime.Now;
+            await Task.Delay(1000, cct);   
+        }
     }
 }
