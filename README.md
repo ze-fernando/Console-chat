@@ -11,6 +11,7 @@ Chat application using SignalR and dotnet 7 where multiple people can connect an
 `cd Chat-dotnet`
 
 1. **Run the server**
+   
 `cd server`
 
 `dotnet clean`
