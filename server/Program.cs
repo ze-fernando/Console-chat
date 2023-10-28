@@ -12,12 +12,13 @@ app.Run();
 
 class MyHub : Hub
 {
-    public async IAsyncEnumerable<DateTime> Streaming(CancellationToken cct)
+    public async Task SendMessage(string user, string message)
     {
-        while (true)
-        {
-            yield return DateTime.Now;
-            await Task.Delay(1000, cct);   
-        }
+        await Clients.All.SendAsync("Message", user, message);
+    }
+
+    public async Task Room(string user)
+    {
+        await Clients.All.SendAsync("Notification", user);
     }
 }
