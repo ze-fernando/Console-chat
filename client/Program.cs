@@ -16,7 +16,7 @@ connection.On("Notification", (string name) =>
 
 await connection.StartAsync();
 
-connection.InvokeCoreAsync("Room", args: new[] {user});
+await connection.InvokeCoreAsync("Room", args: new[] {user});
 
 connection.On("Message", async (string name, string msg) =>
 {
