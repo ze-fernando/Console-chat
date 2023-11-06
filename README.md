@@ -3,7 +3,7 @@ Chat application using SignalR and dotnet 7 where multiple people can connect an
 ## Start
 
 **Requirements**
-- Dotnet 6 or 7
+- Dotnet 7
 - Git
 
 `git clone https://github.com/ze-fernando/Chat-dotnet`
