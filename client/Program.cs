@@ -24,11 +24,14 @@ connection.On("Message", async (string name, string msg) =>
 });
 
 do{
-    Console.Write("> ");
     message = Console.ReadLine();
 
     if (message != "exit")
     {
+        if(message == "clear"){
+            Console.Clear();
+        }
+
         connection.InvokeCoreAsync("SendMessage", args: new[] { user, message });
     }
 
